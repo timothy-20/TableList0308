@@ -6,10 +6,12 @@
 //
 
 #import "AddModalViewController.h"
+#import "LabelViewController.h"
 
 @interface AddModalViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray *cellLabel;
+    NSInteger selectedIndex;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *modalTable;
@@ -26,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    selectedIndex = 0;
     cellLabel = [NSMutableArray arrayWithArray:@[@"레이블", @"개수", @"가격", @"브랜드"]];
     
     self.modalTable.delegate = self;
@@ -74,6 +77,31 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    selectedIndex = indexPath.row;
+    NSLog(@"%d", indexPath.row);
+    return indexPath;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(selectedIndex == 0) {
+        [self performSegueWithIdentifier:@"labelView" sender:nil];
+    } else if (selectedIndex == 1) {
+        [self performSegueWithIdentifier:@"numberView" sender:nil];
+    } else if (selectedIndex == 2) {
+        [self performSegueWithIdentifier:@"priceView" sender:nil];
+    } else if (selectedIndex == 3) {
+        [self performSegueWithIdentifier:@"brandView" sender:nil];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 
 - (IBAction)coffeeAddAction:(id)sender {

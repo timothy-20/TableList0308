@@ -124,27 +124,78 @@
                         <outlet property="coffeeCancel" destination="Q3V-tw-cUa" id="blG-K3-teA"/>
                         <outlet property="modalTable" destination="69k-nM-ltv" id="5Uf-fr-B4U"/>
                         <segue destination="jDL-N6-LDS" kind="show" identifier="labelView" id="hme-sQ-lSh"/>
+                        <segue destination="oov-8W-BAH" kind="show" identifier="numberView" id="bSW-8p-iRd"/>
+                        <segue destination="mYZ-Dg-6Tp" kind="show" identifier="priceView" id="2lO-0E-oNt"/>
+                        <segue destination="aLQ-Jp-6ak" kind="show" identifier="brandView" id="fGU-sC-c3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIK-Sd-EDI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2611.594202898551" y="751.33928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--개수-->
+        <scene sceneID="ZZq-v0-Bhf">
+            <objects>
+                <viewController id="oov-8W-BAH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dc8-Td-ULK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PHZ-1l-Dba"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="개수" id="SYd-gU-vdn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uA2-DO-c3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432" y="751"/>
+        </scene>
+        <!--레이블-->
         <scene sceneID="hhE-ay-qob">
             <objects>
-                <viewController id="jDL-N6-LDS" sceneMemberID="viewController">
+                <viewController id="jDL-N6-LDS" customClass="LabelViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfy-eE-9B5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="R9W-dt-2AY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0Xp-Wo-Ocr"/>
+                    <navigationItem key="navigationItem" title="레이블" id="0Xp-Wo-Ocr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJf-ym-WRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="751"/>
+            <point key="canvasLocation" x="3432" y="64"/>
+        </scene>
+        <!--가격-->
+        <scene sceneID="fRI-fX-kQu">
+            <objects>
+                <viewController id="mYZ-Dg-6Tp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RDE-DQ-ksR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XG7-Xl-Aku"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="가격" id="YuV-01-l5C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHs-cq-Gvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4151" y="64"/>
+        </scene>
+        <!--브랜드-->
+        <scene sceneID="dis-rg-3qw">
+            <objects>
+                <viewController id="aLQ-Jp-6ak" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jjM-S7-oR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5GV-bH-GRu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="브랜드" id="keo-xb-WFE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jF-2l-ryy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4151" y="751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m31-Go-3GI">

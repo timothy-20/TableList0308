@@ -10,6 +10,7 @@
 		996A77B925F5C68F00748934 /* MainTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 996A77B725F5C68F00748934 /* MainTableCellTableViewCell.m */; };
 		996A77BA25F5C68F00748934 /* MainTableCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 996A77B825F5C68F00748934 /* MainTableCellTableViewCell.xib */; };
 		996A77BF25F5FA3C00748934 /* AddModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996A77BD25F5FA3C00748934 /* AddModalViewController.m */; };
+		996A77C525F73B8700748934 /* LabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996A77C425F73B8700748934 /* LabelViewController.m */; };
 		99D3F3DF25F5AFD500E9AC20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3F3DE25F5AFD500E9AC20 /* AppDelegate.m */; };
 		99D3F3E225F5AFD500E9AC20 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3F3E125F5AFD500E9AC20 /* SceneDelegate.m */; };
 		99D3F3E525F5AFD500E9AC20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3F3E425F5AFD500E9AC20 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 		996A77B825F5C68F00748934 /* MainTableCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableCellTableViewCell.xib; sourceTree = "<group>"; };
 		996A77BC25F5FA3C00748934 /* AddModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddModalViewController.h; sourceTree = "<group>"; };
 		996A77BD25F5FA3C00748934 /* AddModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddModalViewController.m; sourceTree = "<group>"; };
+		996A77C325F73B8700748934 /* LabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelViewController.h; sourceTree = "<group>"; };
+		996A77C425F73B8700748934 /* LabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelViewController.m; sourceTree = "<group>"; };
 		99D3F3DA25F5AFD500E9AC20 /* TableList0308.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableList0308.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D3F3DD25F5AFD500E9AC20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		99D3F3DE25F5AFD500E9AC20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 			children = (
 				996A77BC25F5FA3C00748934 /* AddModalViewController.h */,
 				996A77BD25F5FA3C00748934 /* AddModalViewController.m */,
+				996A77C325F73B8700748934 /* LabelViewController.h */,
+				996A77C425F73B8700748934 /* LabelViewController.m */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				996A77BF25F5FA3C00748934 /* AddModalViewController.m in Sources */,
 				99D3F3DF25F5AFD500E9AC20 /* AppDelegate.m in Sources */,
 				99D3F3F025F5AFD900E9AC20 /* main.m in Sources */,
+				996A77C525F73B8700748934 /* LabelViewController.m in Sources */,
 				99D3F3E225F5AFD500E9AC20 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
