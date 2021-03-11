@@ -39,8 +39,8 @@
     self.modalTable.delegate = self;
     self.modalTable.dataSource = self;
     
-    data1 = [NSArray arrayWithObjects:@"data1", @"data2", @"data3", @"data4", nil];
-    data2 = [NSArray arrayWithObjects:@"test1", @"test2", @"test3", @"test4", nil];
+    data1 = [NSArray arrayWithObjects:@"커피", @"에이드", nil];
+    data2 = [NSArray arrayWithObjects:@"라떼", @"모카", @"아메리카노", @"에스프레소", nil];
     
     self.uiPicker.delegate = self;
     self.uiPicker.dataSource = self;
@@ -156,6 +156,38 @@
         return [data1 objectAtIndex:row];
     } else {
         return [data2 objectAtIndex:row];
+    }
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+//    NSLog(@"%d", component);
+//    NSLog(@"%d", row);
+    
+//    if(component == 0 && row == 2) {
+//        NSLog(@"this way");
+//        NSMutableArray *data1Update = [data1 mutableCopy];
+//        data1Update[2] = @"hello";
+//
+//        data1 = [NSArray arrayWithArray:data1Update];
+//        [self.uiPicker reloadAllComponents];
+//    }
+    
+//    data2 = [NSArray arrayWithObjects:@"라뗴", @"모카", @"아메리카노", @"에스프레소", nil];
+    
+    if(component == 0 && row == 0) {
+        NSLog(@"data1's first row");
+        
+        NSMutableArray *coffeeData = [NSMutableArray arrayWithObjects:@"라떼", @"모카", @"아메리카노", @"에스프레소", nil];
+        data2 = [NSArray arrayWithArray:coffeeData];
+        
+        [self.uiPicker reloadComponent:1];
+    } else if (component == 0 && row == 1) {
+        NSLog(@"data1's second row");
+        
+        NSMutableArray *aidData = [NSMutableArray arrayWithObjects:@"레몬 에이드", @"청귤 에이드", @"사과 에이드", nil];
+        data2 = [NSArray arrayWithArray:aidData];
+        [self.uiPicker reloadComponent:1];
     }
 }
 
