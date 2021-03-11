@@ -114,7 +114,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 0)];
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
     
 //    footerView.layer.borderColor = [[UIColor grayColor] CGColor];
 //    footerView.layer.borderWidth = 1.0;
@@ -180,6 +180,7 @@
         
         NSMutableArray *coffeeData = [NSMutableArray arrayWithObjects:@"라떼", @"모카", @"아메리카노", @"에스프레소", nil];
         data2 = [NSArray arrayWithArray:coffeeData];
+        [self.uiPicker selectRow:0 inComponent:1 animated:YES];
         
         [self.uiPicker reloadComponent:1];
     } else if (component == 0 && row == 1) {
@@ -187,6 +188,8 @@
         
         NSMutableArray *aidData = [NSMutableArray arrayWithObjects:@"레몬 에이드", @"청귤 에이드", @"사과 에이드", nil];
         data2 = [NSArray arrayWithArray:aidData];
+        [self.uiPicker selectRow:0 inComponent:1 animated:YES];
+        
         [self.uiPicker reloadComponent:1];
     }
 }
