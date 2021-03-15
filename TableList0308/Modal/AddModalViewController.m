@@ -8,6 +8,21 @@
 #import "AddModalViewController.h"
 #import "LabelViewController.h"
 
+@class BviewController;
+@protocol BviewDelegate <NSObject>
+
+-(void)getSelectData:(NSDictionary *)selectData;
+
+@end
+
+@interface BviewController : UIViewController
+@property (nonatomic, assign) id<BviewDelegate> delegate;
+
+@end
+
+#pragma mark - delegate
+
+
 @interface AddModalViewController ()<UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
 {
     NSMutableArray *cellLabel;
@@ -97,7 +112,9 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    backItem.title = @"취소";
+    self.navigationItem.backBarButtonItem = backItem;
 }
 
 #pragma mark - section style
