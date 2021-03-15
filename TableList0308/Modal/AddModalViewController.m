@@ -230,8 +230,6 @@
             break;
             
         default:
-            self.menuLabel.text = self.menuSet.text;
-            
             break;
     }
     

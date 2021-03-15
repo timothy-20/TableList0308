@@ -182,14 +182,39 @@
                     <view key="view" contentMode="scaleToFill" id="rfy-eE-9B5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="레이블 이름:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyW-yI-5wj">
+                                <rect key="frame" x="20" y="385" width="97" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-DZ-46G">
+                                <rect key="frame" x="125" y="380" width="269" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R9W-dt-2AY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="레이블" id="0Xp-Wo-Ocr"/>
+                    <navigationItem key="navigationItem" title="레이블" id="0Xp-Wo-Ocr">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="9H9-w6-jyb">
+                            <connections>
+                                <action selector="getLabelData:" destination="jDL-N6-LDS" id="bcX-eu-yac"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="insertBtn" destination="9H9-w6-jyb" id="LnU-1b-wUR"/>
+                        <outlet property="labelName" destination="tfp-DZ-46G" id="vDP-rR-D14"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJf-ym-WRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3432" y="64"/>
+            <point key="canvasLocation" x="3431.884057971015" y="63.616071428571423"/>
         </scene>
         <!--가격-->
         <scene sceneID="fRI-fX-kQu">

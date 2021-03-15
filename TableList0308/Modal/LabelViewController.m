@@ -8,15 +8,27 @@
 #import "LabelViewController.h"
 
 @interface LabelViewController ()
-
+{
+    NSString *labelNametext;
+}
+@property (weak, nonatomic) IBOutlet UITextField *labelName;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *insertBtn;
 
 @end
 
 @implementation LabelViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
+}
+
+-(IBAction)getLabelData:(id)sender
+{
+    NSLog(@"%@", labelNametext);
+    labelNametext =  self.labelName.text;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LabelViewController : UIViewController
 {
-    int myIndex;
+    
 }
 
 @end
