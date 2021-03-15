@@ -200,8 +200,8 @@
                         <viewLayoutGuide key="safeArea" id="R9W-dt-2AY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="레이블" id="0Xp-Wo-Ocr">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="9H9-w6-jyb">
+                    <navigationItem key="navigationItem" title="레이블" leftItemsSupplementBackButton="YES" id="0Xp-Wo-Ocr">
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="9H9-w6-jyb">
                             <connections>
                                 <action selector="getLabelData:" destination="jDL-N6-LDS" id="bcX-eu-yac"/>
                             </connections>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJf-ym-WRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431.884057971015" y="63.616071428571423"/>
+            <point key="canvasLocation" x="3432" y="64"/>
         </scene>
         <!--가격-->
         <scene sceneID="fRI-fX-kQu">

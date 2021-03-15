@@ -6,6 +6,7 @@
 //
 
 #import "LabelViewController.h"
+#import "AddModalViewController.h"
 
 @interface LabelViewController ()
 {
@@ -21,14 +22,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+//    backItem.title = @"취소";
+//    self.navigationItem.backBarButtonItem = backItem;
+//}
+
+//작동 안함.
 
 -(IBAction)getLabelData:(id)sender
 {
     NSLog(@"%@", labelNametext);
+    
     labelNametext =  self.labelName.text;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end
