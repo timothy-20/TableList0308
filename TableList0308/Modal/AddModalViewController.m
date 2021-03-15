@@ -23,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *coffeeCancel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *coffeeAdd;
 
+@property (weak, nonatomic) IBOutlet UILabel *menuLabel;
+@property (weak, nonatomic) IBOutlet UITextField *menuSet;
+
 - (IBAction)coffeeCancelAction:(id)sender;
 - (IBAction)coffeeAddAction:(id)sender;
 
@@ -44,6 +47,10 @@
     
     self.uiPicker.delegate = self;
     self.uiPicker.dataSource = self;
+    
+    [self.menuLabel setFont:[UIFont boldSystemFontOfSize:16]];
+    [self.menuLabel setFont:[UIFont systemFontOfSize:20]];
+    [self.menuSet setFont:[UIFont systemFontOfSize:20]];
 }
 
 #pragma mark - custom cell
@@ -174,23 +181,64 @@
 //    }
     
 //    data2 = [NSArray arrayWithObjects:@"라뗴", @"모카", @"아메리카노", @"에스프레소", nil];
+
+    NSMutableArray *coffeeData = [NSMutableArray arrayWithObjects:@"라떼", @"모카", @"아메리카노", @"에스프레소", nil];
+    NSMutableArray *aidData = [NSMutableArray arrayWithObjects:@"레몬 에이드", @"청귤 에이드", @"사과 에이드", nil];
+    
+    NSInteger *menuComponent = [self.uiPicker selectedRowInComponent:1];
+    
+    switch ([self.uiPicker selectedRowInComponent:0]) {
+        case 0:
+            NSLog(@"1");
+            
+            data2 = [NSArray arrayWithArray:coffeeData];
+            [self.uiPicker reloadComponent:1];
+            
+            if (menuComponent == 0) {
+                self.menuSet.text = @"라떼";
+                self.menuLabel.text = @"라떼";
+            } else if (menuComponent == 1) {
+                self.menuSet.text = @"모카";
+                self.menuLabel.text = @"모카";
+            } else if (menuComponent == 2) {
+                self.menuSet.text = @"아메리카노";
+                self.menuLabel.text = @"아메리카노";
+            } else if (menuComponent == 3) {
+                self.menuSet.text = @"에스프레소";
+                self.menuLabel.text = @"에스프레소";
+            }
+            
+            break;
+            
+        case 1:
+            NSLog(@"2");
+            
+            data2 = [NSArray arrayWithArray:aidData];
+            [self.uiPicker reloadComponent:1];
+            
+            if (menuComponent == 0) {
+                self.menuSet.text = @"레몬 에이드";
+                self.menuLabel.text = @"레몬 에이드";
+            } else if (menuComponent == 1) {
+                self.menuSet.text = @"청귤 에이드";
+                self.menuLabel.text = @"청귤 에이드";
+            } else if (menuComponent == 2) {
+                self.menuSet.text = @"사과 에이드";
+                self.menuLabel.text = @"사과 에이드";
+            }
+            
+            break;
+            
+        default:
+            self.menuLabel.text = self.menuSet.text;
+            
+            break;
+    }
     
     if(component == 0 && row == 0) {
-        NSLog(@"data1's first row");
-        
-        NSMutableArray *coffeeData = [NSMutableArray arrayWithObjects:@"라떼", @"모카", @"아메리카노", @"에스프레소", nil];
-        data2 = [NSArray arrayWithArray:coffeeData];
         [self.uiPicker selectRow:0 inComponent:1 animated:YES];
-        
-        [self.uiPicker reloadComponent:1];
     } else if (component == 0 && row == 1) {
-        NSLog(@"data1's second row");
-        
-        NSMutableArray *aidData = [NSMutableArray arrayWithObjects:@"레몬 에이드", @"청귤 에이드", @"사과 에이드", nil];
-        data2 = [NSArray arrayWithArray:aidData];
         [self.uiPicker selectRow:0 inComponent:1 animated:YES];
-        
-        [self.uiPicker reloadComponent:1];
     }
 }
 
